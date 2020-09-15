@@ -1,11 +1,14 @@
 katz_deli = []
 
-def line(katz_deli)
-	if katz_deli.empty?
-		puts "The line is currently empty."
-	else
-		puts "The line is currently: 1. #{katz_deli[0]} 2. #{katz_deli[1]} 3. #{katz_deli[2]}"
-	end
+def line(derp)
+  if derp == []
+    puts "The line is currently empty."
+  else
+    status = "The line is currently:"
+    derp.each_with_index do |name, index|
+      status += " #{index + 1}. #{name}"
+    end
+    puts status
 end
 
 
